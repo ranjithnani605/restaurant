@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, ChevronDown } from 'lucide-react';
+import NestedMenuDropdown from './NestedMenuDropdown';
 import logo from '../../public/Full-Logo.png'; // ✅ place your logo in /src/assets and adjust the path
 
 const Navbar = () => {
@@ -46,58 +47,12 @@ const Navbar = () => {
             </Link>
 
             {/* Menu Dropdown */}
-            <div className="relative">
-              <button
-                onMouseEnter={() => setIsMenuOpen(true)}
-                onMouseLeave={() => setIsMenuOpen(false)}
-                className={`px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center ${
-                  isActive('/menu') ? 'text-green-600 bg-green-50' : 'text-gray-700 hover:text-green-600'
-                }`}
-              >
-                Menu
-                <ChevronDown className="ml-1 h-4 w-4" />
-              </button>
-              {isMenuOpen && (
-                <div
-                  onMouseEnter={() => setIsMenuOpen(true)}
-                  onMouseLeave={() => setIsMenuOpen(false)}
-                  className="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50"
-                >
-                  <Link
-                    to="/menu"
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-green-50 hover:text-green-600"
-                  >
-                    Full Menu
-                  </Link>
-                  <div className="border-t border-gray-200"></div>
-                  <div className="px-4 py-2 text-xs text-gray-500 uppercase tracking-wide">Categories</div>
-                  <Link
-                    to="/menu#starters"
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-yellow-50 hover:text-yellow-600"
-                  >
-                    Starters
-                  </Link>
-                  <Link
-                    to="/menu#mains"
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-yellow-50 hover:text-yellow-600"
-                  >
-                    Main Courses
-                  </Link>
-                  <Link
-                    to="/menu#biryanis"
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-yellow-50 hover:text-yellow-600"
-                  >
-                    Biryanis
-                  </Link>
-                  <Link
-                    to="/menu#desserts"
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-yellow-50 hover:text-yellow-600"
-                  >
-                    Desserts
-                  </Link>
-                </div>
-              )}
-            </div>
+            <NestedMenuDropdown 
+              onItemSelect={(item) => {
+                console.log('Selected item:', item);
+                // You can add navigation logic here if needed
+              }}
+            />
 
             <Link
               to="/catering"
@@ -161,6 +116,15 @@ const Navbar = () => {
               >
                 Menu
               </Link>
+              <div className="px-3 py-2">
+                <NestedMenuDropdown 
+                  onItemSelect={(item) => {
+                    console.log('Selected item:', item);
+                    setIsOpen(false);
+                  }}
+                  className="w-full"
+                />
+              </div>
               <Link
                 to="/catering"
                 className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-orange-600"

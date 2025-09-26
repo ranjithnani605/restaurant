@@ -8,6 +8,7 @@ import Menu from './pages/Menu';
 import Catering from './pages/Catering';
 import BookTable from './pages/BookTable';
 import Contact from './pages/Contact';
+import MenuDemo from './pages/MenuDemo';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="/catering" element={<Catering />} />
           <Route path="/book-table" element={<BookTable />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/menu-demo" element={<MenuDemo />} />
         </Routes>
         <Footer />
       </div>
