@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Star, Clock, Users, Award, Camera, Quote } from 'lucide-react';
+import { Star, Clock, Users, Award, Camera, Quote, CheckCircle } from 'lucide-react';
 
 const Home = () => {
   const galleryImages = [
@@ -15,7 +15,7 @@ const Home = () => {
   const testimonials = [
     {
       name: "Sophia L.",
-      text: "The best Indian food I’ve ever had! The flavors were so authentic and the service was outstanding.",
+      text: "The best Indian food I've ever had! The flavors were so authentic and the service was outstanding.",
       image: "https://randomuser.me/api/portraits/women/65.jpg"
     },
     {
@@ -66,6 +66,46 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Halal Certification Section */}
+      <section className="py-12 bg-gradient-to-r from-green-600 to-emerald-600 relative overflow-hidden">
+        <div className="absolute inset-0 bg-black bg-opacity-10"></div>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="animate-bounce mb-4">
+            <div className="inline-flex items-center justify-center w-20 h-20 bg-white rounded-full shadow-lg">
+              <CheckCircle className="h-10 w-10 text-green-600 animate-pulse" />
+            </div>
+          </div>
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 animate-slide-in-left">
+            100% HALAL CERTIFIED
+          </h2>
+          <p className="text-xl text-green-100 mb-6 animate-slide-in-right">
+            All our meat is sourced from certified Halal suppliers
+          </p>
+          <div className="flex flex-wrap justify-center items-center gap-6 text-white">
+            <div className="flex items-center animate-slide-in-left">
+              <div className="w-3 h-3 bg-white rounded-full mr-2 animate-pulse"></div>
+              <span className="text-lg font-semibold">Halal Chicken</span>
+            </div>
+            <div className="flex items-center animate-slide-in-up">
+              <div className="w-3 h-3 bg-white rounded-full mr-2 animate-pulse"></div>
+              <span className="text-lg font-semibold">Halal Lamb</span>
+            </div>
+            <div className="flex items-center animate-slide-in-right">
+              <div className="w-3 h-3 bg-white rounded-full mr-2 animate-pulse"></div>
+              <span className="text-lg font-semibold">Halal Beef</span>
+            </div>
+          </div>
+        </div>
+        
+        {/* Animated Background Elements */}
+        <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+          <div className="absolute top-10 left-10 w-4 h-4 bg-white bg-opacity-20 rounded-full animate-bounce" style={{animationDelay: '0s'}}></div>
+          <div className="absolute top-20 right-20 w-6 h-6 bg-white bg-opacity-20 rounded-full animate-bounce" style={{animationDelay: '0.5s'}}></div>
+          <div className="absolute bottom-20 left-20 w-5 h-5 bg-white bg-opacity-20 rounded-full animate-bounce" style={{animationDelay: '1s'}}></div>
+          <div className="absolute bottom-10 right-10 w-3 h-3 bg-white bg-opacity-20 rounded-full animate-bounce" style={{animationDelay: '1.5s'}}></div>
+        </div>
+      </section>
+
       {/* Features Section */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -78,8 +118,8 @@ const Home = () => {
               <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Award className="h-8 w-8 text-green-600" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">Award Winning</h3>
-              <p className="text-gray-600">Recognized for excellence in authentic Indian cuisine</p>
+              <h3 className="text-xl font-semibold mb-2">100% Halal</h3>
+              <p className="text-gray-600">All our meat is certified Halal for your peace of mind</p>
             </div>
             <div className="text-center animate-slide-in-right">
               <div className="bg-yellow-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
