@@ -101,7 +101,43 @@ const Menu = () => {
 
   const nonVegetarianCategories = [
     {
-      id: 'non-veg-starters',
+      id: 'indian-street-food',
+      name: 'Indian Street Food',
+      image: 'https://images.pexels.com/photos/5560763/pexels-photo-5560763.jpeg?auto=compress&cs=tinysrgb&w=800',
+      items: [
+        { name: 'Chicken Chaat', description: 'Spicy chicken with tangy chutneys and crispy sev', price: '£8.95', spice: 'Medium' },
+        { name: 'Chicken Tikka Roll', description: 'Grilled chicken wrapped in soft paratha with onions', price: '£9.95', spice: 'Medium' },
+        { name: 'Seekh Kebab Roll', description: 'Minced lamb kebab wrapped in naan with mint chutney', price: '£10.95', spice: 'Hot' },
+        { name: 'Chicken Samosa Chat', description: 'Chicken samosa topped with yogurt and chutneys', price: '£7.95', spice: 'Mild' },
+        { name: 'Fish Tikka Roll', description: 'Spiced fish tikka in paratha with salad', price: '£11.95', spice: 'Medium' }
+      ]
+    },
+    {
+      id: 'dosas',
+      name: 'Dosas',
+      image: 'https://images.pexels.com/photos/2474658/pexels-photo-2474658.jpeg?auto=compress&cs=tinysrgb&w=800',
+      items: [
+        { name: 'Chicken Masala Dosa', description: 'Crispy dosa filled with spiced chicken curry', price: '£12.95', spice: 'Medium' },
+        { name: 'Mutton Keema Dosa', description: 'Dosa stuffed with minced mutton and onions', price: '£13.95', spice: 'Hot' },
+        { name: 'Egg Dosa', description: 'Dosa with beaten egg spread and spices', price: '£9.95', spice: 'Mild' },
+        { name: 'Chicken Tikka Dosa', description: 'Dosa filled with chicken tikka pieces', price: '£14.95', spice: 'Medium' },
+        { name: 'Fish Curry Dosa', description: 'Crispy dosa with South Indian fish curry', price: '£13.95', spice: 'Hot' }
+      ]
+    },
+    {
+      id: 'fried-rice',
+      name: 'Fried Rice',
+      image: 'https://images.pexels.com/photos/13647508/pexels-photo-13647508.jpeg?auto=compress&cs=tinysrgb&w=800',
+      items: [
+        { name: 'Chicken Fried Rice', description: 'Wok-tossed rice with chicken and vegetables', price: '£11.95', spice: 'Mild' },
+        { name: 'Prawn Fried Rice', description: 'Fragrant rice with prawns and spring onions', price: '£13.95', spice: 'Medium' },
+        { name: 'Mutton Fried Rice', description: 'Spiced rice with tender mutton pieces', price: '£14.95', spice: 'Medium' },
+        { name: 'Mixed Meat Fried Rice', description: 'Rice with chicken, mutton, and prawns', price: '£16.95', spice: 'Medium' },
+        { name: 'Egg Fried Rice', description: 'Classic fried rice with scrambled eggs', price: '£9.95', spice: 'Mild' }
+      ]
+    },
+    {
+      id: 'starters',
       name: 'Starters',
       image: 'https://images.pexels.com/photos/5560763/pexels-photo-5560763.jpeg?auto=compress&cs=tinysrgb&w=800',
       items: [
@@ -114,8 +150,8 @@ const Menu = () => {
       ]
     },
     {
-      id: 'non-veg-mains',
-      name: 'Main Courses',
+      id: 'curries',
+      name: 'Curries',
       image: 'https://images.pexels.com/photos/2474658/pexels-photo-2474658.jpeg?auto=compress&cs=tinysrgb&w=800',
       items: [
         { name: 'Butter Chicken', description: 'Tender chicken in rich, creamy tomato sauce', price: '£14.95', spice: 'Mild' },
@@ -129,7 +165,31 @@ const Menu = () => {
       ]
     },
     {
-      id: 'non-veg-biryanis',
+      id: 'breads',
+      name: 'Breads',
+      image: 'https://images.pexels.com/photos/5560025/pexels-photo-5560025.jpeg?auto=compress&cs=tinysrgb&w=800',
+      items: [
+        { name: 'Keema Naan', description: 'Naan stuffed with spiced minced meat', price: '£6.95', spice: 'Medium' },
+        { name: 'Chicken Naan', description: 'Naan filled with tandoori chicken pieces', price: '£6.95', spice: 'Medium' },
+        { name: 'Plain Naan', description: 'Traditional leavened bread from tandoor', price: '£3.95', spice: 'None' },
+        { name: 'Garlic Naan', description: 'Naan bread with fresh garlic and herbs', price: '£4.95', spice: 'None' },
+        { name: 'Butter Naan', description: 'Soft naan brushed with melted butter', price: '£4.50', spice: 'None' }
+      ]
+    },
+    {
+      id: 'rice',
+      name: 'Rice',
+      image: 'https://images.pexels.com/photos/13647508/pexels-photo-13647508.jpeg?auto=compress&cs=tinysrgb&w=800',
+      items: [
+        { name: 'Pilau Rice', description: 'Fragrant basmati rice with whole spices', price: '£4.95', spice: 'Mild' },
+        { name: 'Coconut Rice', description: 'Basmati rice cooked with coconut milk', price: '£5.95', spice: 'Mild' },
+        { name: 'Jeera Rice', description: 'Cumin flavored basmati rice', price: '£4.95', spice: 'Mild' },
+        { name: 'Lemon Rice', description: 'Tangy rice with curry leaves and mustard seeds', price: '£5.95', spice: 'Medium' },
+        { name: 'Plain Basmati Rice', description: 'Steamed long grain basmati rice', price: '£3.95', spice: 'None' }
+      ]
+    },
+    {
+      id: 'biryanis',
       name: 'Biryanis',
       image: 'https://images.pexels.com/photos/13647508/pexels-photo-13647508.jpeg?auto=compress&cs=tinysrgb&w=800',
       items: [
@@ -137,7 +197,104 @@ const Menu = () => {
         { name: 'Lamb Biryani', description: 'Fragrant rice with succulent lamb pieces', price: '£17.95', spice: 'Medium' },
         { name: 'Prawn Biryani', description: 'King prawns with spiced basmati rice', price: '£18.95', spice: 'Medium' },
         { name: 'Fish Biryani', description: 'Fresh fish with aromatic rice and spices', price: '£17.95', spice: 'Medium' },
-        { name: 'Mutton Biryani', description: 'Tender mutton with fragrant basmati rice', price: '£19.95', spice: 'Medium' }
+        { name: 'Mutton Biryani', description: 'Tender mutton with fragrant basmati rice', price: '£19.95', spice: 'Medium' },
+        { name: 'Hyderabadi Biryani', description: 'Traditional Hyderabadi style with boiled eggs', price: '£16.95', spice: 'Medium' }
+      ]
+    },
+    {
+      id: 'thaalis',
+      name: 'Thaalis',
+      image: 'https://images.pexels.com/photos/4198019/pexels-photo-4198019.jpeg?auto=compress&cs=tinysrgb&w=800',
+      items: [
+        { name: 'Non-Veg Thaali', description: 'Complete meal with chicken curry, dal, rice, naan, and dessert', price: '£18.95', spice: 'Medium' },
+        { name: 'Chicken Thaali', description: 'Chicken curry, dal, rice, roti, pickle, and papad', price: '£16.95', spice: 'Medium' },
+        { name: 'Mutton Thaali', description: 'Mutton curry with rice, dal, vegetables, and bread', price: '£19.95', spice: 'Medium' },
+        { name: 'Fish Thaali', description: 'Fish curry with rice, dal, vegetables, and pickle', price: '£17.95', spice: 'Medium' },
+        { name: 'Mixed Meat Thaali', description: 'Chicken and mutton curries with rice and bread', price: '£21.95', spice: 'Medium' }
+      ]
+    },
+    {
+      id: 'burger-chips',
+      name: 'Burger/Chips',
+      image: 'https://images.pexels.com/photos/1639557/pexels-photo-1639557.jpeg?auto=compress&cs=tinysrgb&w=800',
+      items: [
+        { name: 'Chicken Tikka Burger', description: 'Grilled chicken tikka in brioche bun with salad', price: '£9.95', spice: 'Medium' },
+        { name: 'Seekh Kebab Burger', description: 'Spiced lamb patty with mint chutney and onions', price: '£10.95', spice: 'Hot' },
+        { name: 'Fish Burger', description: 'Crispy fish fillet with tartar sauce and lettuce', price: '£9.95', spice: 'Mild' },
+        { name: 'Masala Chips', description: 'Crispy chips seasoned with Indian spices', price: '£4.95', spice: 'Medium' },
+        { name: 'Chicken Wings & Chips', description: 'Spicy wings served with seasoned chips', price: '£11.95', spice: 'Hot' }
+      ]
+    },
+    {
+      id: 'milk-shakes',
+      name: 'Milk Shakes',
+      image: 'https://images.pexels.com/photos/1092730/pexels-photo-1092730.jpeg?auto=compress&cs=tinysrgb&w=800',
+      items: [
+        { name: 'Mango Milkshake', description: 'Creamy shake with fresh mango pulp', price: '£4.95', spice: 'None' },
+        { name: 'Chocolate Milkshake', description: 'Rich chocolate shake with whipped cream', price: '£4.95', spice: 'None' },
+        { name: 'Strawberry Milkshake', description: 'Fresh strawberry shake with vanilla ice cream', price: '£4.95', spice: 'None' },
+        { name: 'Vanilla Milkshake', description: 'Classic vanilla shake with ice cream', price: '£4.50', spice: 'None' },
+        { name: 'Kulfi Milkshake', description: 'Traditional Indian ice cream shake with pistachios', price: '£5.95', spice: 'None' }
+      ]
+    },
+    {
+      id: 'salads',
+      name: 'Salads',
+      image: 'https://images.pexels.com/photos/1059905/pexels-photo-1059905.jpeg?auto=compress&cs=tinysrgb&w=800',
+      items: [
+        { name: 'Chicken Tikka Salad', description: 'Grilled chicken with mixed greens and mint dressing', price: '£9.95', spice: 'Mild' },
+        { name: 'Tandoori Prawn Salad', description: 'Spiced prawns with cucumber and tomato salad', price: '£11.95', spice: 'Medium' },
+        { name: 'Seekh Kebab Salad', description: 'Minced lamb kebab with fresh salad and yogurt', price: '£10.95', spice: 'Medium' },
+        { name: 'Fish Tikka Salad', description: 'Grilled fish with mixed vegetables and lemon', price: '£10.95', spice: 'Medium' },
+        { name: 'Mixed Meat Salad', description: 'Chicken and lamb with fresh greens and chutneys', price: '£12.95', spice: 'Medium' }
+      ]
+    },
+    {
+      id: 'tea',
+      name: 'Tea',
+      image: 'https://images.pexels.com/photos/1638280/pexels-photo-1638280.jpeg?auto=compress&cs=tinysrgb&w=800',
+      items: [
+        { name: 'Masala Chai', description: 'Spiced tea with milk and cardamom', price: '£3.95', spice: 'None' },
+        { name: 'Ginger Tea', description: 'Fresh ginger tea with honey', price: '£3.50', spice: 'None' },
+        { name: 'Cardamom Tea', description: 'Aromatic tea with green cardamom', price: '£3.95', spice: 'None' },
+        { name: 'Lemon Tea', description: 'Black tea with fresh lemon and mint', price: '£3.50', spice: 'None' },
+        { name: 'Kashmiri Kahwa', description: 'Traditional tea with saffron and almonds', price: '£4.95', spice: 'None' }
+      ]
+    },
+    {
+      id: 'desserts',
+      name: 'Desserts',
+      image: 'https://images.pexels.com/photos/6789045/pexels-photo-6789045.jpeg?auto=compress&cs=tinysrgb&w=800',
+      items: [
+        { name: 'Gulab Jamun', description: 'Sweet dumplings in cardamom syrup', price: '£5.95', spice: 'None' },
+        { name: 'Rasmalai', description: 'Cottage cheese dumplings in sweetened milk', price: '£6.95', spice: 'None' },
+        { name: 'Kulfi', description: 'Traditional Indian ice cream with pistachios', price: '£4.95', spice: 'None' },
+        { name: 'Gajar Halwa', description: 'Carrot pudding with nuts and cardamom', price: '£5.95', spice: 'None' },
+        { name: 'Kheer', description: 'Rice pudding with saffron and almonds', price: '£5.95', spice: 'None' }
+      ]
+    },
+    {
+      id: 'coffees',
+      name: 'Coffees',
+      image: 'https://images.pexels.com/photos/302899/pexels-photo-302899.jpeg?auto=compress&cs=tinysrgb&w=800',
+      items: [
+        { name: 'Filter Coffee', description: 'South Indian style coffee with milk', price: '£3.95', spice: 'None' },
+        { name: 'Cappuccino', description: 'Espresso with steamed milk and foam', price: '£4.50', spice: 'None' },
+        { name: 'Latte', description: 'Smooth espresso with steamed milk', price: '£4.50', spice: 'None' },
+        { name: 'Black Coffee', description: 'Strong black coffee without milk', price: '£3.50', spice: 'None' },
+        { name: 'Masala Coffee', description: 'Spiced coffee with cardamom and cinnamon', price: '£4.95', spice: 'None' }
+      ]
+    },
+    {
+      id: 'kids-menu',
+      name: 'Kids Menu',
+      image: 'https://images.pexels.com/photos/1639557/pexels-photo-1639557.jpeg?auto=compress&cs=tinysrgb&w=800',
+      items: [
+        { name: 'Mini Chicken Curry', description: 'Mild chicken curry with rice (kids portion)', price: '£7.95', spice: 'Mild' },
+        { name: 'Chicken Nuggets', description: 'Crispy chicken nuggets with chips', price: '£6.95', spice: 'None' },
+        { name: 'Mini Chicken Biryani', description: 'Small portion of chicken biryani', price: '£8.95', spice: 'Mild' },
+        { name: 'Egg Fried Rice', description: 'Simple fried rice with scrambled eggs', price: '£5.95', spice: 'None' },
+        { name: 'Plain Naan & Chicken', description: 'Soft naan with mild chicken pieces', price: '£7.95', spice: 'Mild' }
       ]
     }
   ];
